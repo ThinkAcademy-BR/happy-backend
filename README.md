@@ -17,7 +17,7 @@
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e [Docker](https://www.notion.so/Deploy-NLW-ccd6afdf9e644673b9cb22c4aebaf39c#0cc68175aaef46618e6335585429a60a).
 Além disto, é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 ### 🎲 Rodando nossa aplicação
@@ -29,14 +29,17 @@ $ git clone git@github.com:juniorwmr/happy-backend.git
 # Acesse a pasta do projeto no terminal/cmd
 $ cd happy-backend
 
+# Instale as dependências
+$ npm install
+
+# Instale o yarn caso ainda não o tenha
+$ npm i -g yarn
+
 # Execute as migrações
 $ yarn typeorm migration:run
 
 # Crie um arquivo na pasta raiz do projeto e crie uma variável chamada HOST, atribuindo-a o host da aplicação
 $ touch .env
-
-# Instale as dependências
-$ npm install
 
 # Execute a aplicação em modo de desenvolvimento
 $ npm start
